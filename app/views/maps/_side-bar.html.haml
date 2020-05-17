@@ -1,0 +1,16 @@
+.search-side
+  .search-word
+    .search-word__box
+      -# .search-text__box__name
+      %input.word-input{:type=>"text", :placeholder=>"スキー場名:(例)大山スキー場"}
+    .search-word__icon
+      = link_to "#", class: "word__icon-btn", type: "submit" do
+        検索
+  .search-address  
+    .search-address__box
+      -# .search-address__box__content
+      %input.address-input{:type=>"text", :placeholder=>"検索したい住所:(例)鳥取県"}
+    .search-address__icon
+      = link_to "#", class: "address__icon-btn", type: "submit" do
+        検索
+
