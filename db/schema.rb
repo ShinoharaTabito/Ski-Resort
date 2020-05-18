@@ -13,7 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_05_12_095906) do
 
   create_table "maps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "adress"
+    t.text "name"
+    t.string "address"
     t.float "latitude"
     t.float "longitude"
     t.datetime "created_at", null: false

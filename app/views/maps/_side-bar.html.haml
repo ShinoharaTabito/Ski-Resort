@@ -1,16 +1,18 @@
 .search-side
   .search-word
     .search-word__box
-      -# .search-text__box__name
-      %input.word-input{:type=>"text", :placeholder=>"スキー場名:(例)大山スキー場"}
+      -# = form_with(model: @maps, local: true) do |form|
+      -#   = form.text_field :name, placeholder: "検索したい雪山名"
+      -#   = form.text_field :address, placeholder: "住所から検索する"
+      -#   = form.submit "検索する"
+      %input#word-input{:type=>"text", :placeholder=>"スキー場名:(例)大山スキー場"}
     .search-word__icon
       = link_to "#", class: "word__icon-btn", type: "submit" do
         検索
+      -# %input{:onclick => "codeAddress()", :type => "button", :value => "検索"}/
   .search-address  
-    .search-address__box
-      -# .search-address__box__content
-      %input.address-input{:type=>"text", :placeholder=>"検索したい住所:(例)鳥取県"}
-    .search-address__icon
-      = link_to "#", class: "address__icon-btn", type: "submit" do
-        検索
-
+    -# .search-address__box
+    -#   -# %input.address-input{:type=>"text", :placeholder=>"検索したい住所:(例)鳥取県"}
+    -# .search-address__icon
+    -#   = link_to "#", class: "address__icon-btn", type: "submit" do
+    -#     検索
